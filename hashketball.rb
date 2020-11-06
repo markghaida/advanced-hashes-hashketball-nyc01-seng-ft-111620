@@ -227,12 +227,12 @@ def big_shoe_rebounds
   game_hash.each do |key, value|
       value.each do |k, v|
         game_hash[key][:players].each do |player|
-                   binding.pry
+                  # binding.pry
            if player[:shoe] > largest_size
               largest_size = player[:shoe]
               largest_size_name = player[:player_name]
            end
-            #binding.pry
+            binding.pry
             
         end
         # binding.pry
