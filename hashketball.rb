@@ -229,7 +229,7 @@ def big_shoe_rebounds
         game_hash[key][:players].each do |player|
                    binding.pry
            if player[:shoe] > largest_size
-              new_array new_array << player[:shoe]
+              largest_size = player[:shoe]
            end
             #binding.pry
             
