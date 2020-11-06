@@ -1,3 +1,5 @@
+require 'pry'
+require './hashketball.rb'
 # Write your code below game_hash
 def game_hash
   {
@@ -126,4 +128,118 @@ def game_hash
   }
 end
 
-# Write code here
+
+def num_points_scored(player_name)
+  game_hash.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        v.each do |name|
+          if name[:player_name] == player_name
+            return name[:points]
+          end
+        end 
+      end 
+    end 
+  end 
+end
+
+def shoe_size(player_name)
+  game_hash.each do |key, value|
+    value.each do |k, v|
+      if k == :players
+        v.each do |shoe|
+          if shoe[:player_name] == player_name
+            return shoe[:shoe]
+          end
+        end 
+      end 
+    end 
+  end 
+end
+
+def team_colors(team_name)
+  game_hash.each do |key, value|
+    value.each do |k, v|
+      if v == team_name
+          return game_hash[key][:colors]
+      end
+    end 
+  end 
+end
+
+def team_names
+  new_array = []
+  game_hash.each do |key, value|
+     
+    value.each do |k, v|
+      #binding.pry
+      if k == :team_name
+          new_array << v
+          #binding.pry
+      end
+    end 
+  end
+    return new_array
+  end 
+
+  
+  
+  def player_numbers(team_name)
+    new_array = []
+    game_hash.each do |key, value|
+      value.each do |k, v|
+        # binding.pry
+        if v == team_name
+              game_hash[key][:players].each do |number|
+                # binding.pry
+                if number[:number] == number[:number]
+                  new_array << number[:number]
+                end
+                 #binding.pry
+              end
+            return new_array
+        end
+      end
+   end
+  end
+  
+  def player_stats(player_name)
+    # new_hash = {}
+    game_hash.each do |key, value|
+      value.each do |k, v|
+        game_hash[key][:players].each do |name|
+                   #binding.pry
+                if name[:player_name] == player_name
+                  # new_hash = name
+                  return name
+                end
+                 #binding.pry
+        end
+        # binding.pry
+        # return name
+      end
+    end
+  end
+  
+def big_shoe_rebounds
+  largest_size = 0
+  largest_size_name = ""
+  game_hash.each do |key, value|
+      game_hash[key][:players].each do |player|
+                  # binding.pry
+           if player[:shoe] > largest_size
+              largest_size = player[:shoe]
+              largest_size_name = player[:player_name]
+           end
+            # binding.pry
+            
+        end
+        # return the player with the largest shoe size
+        game_hash[key][:players].each do |player_name|
+          # binding.pry
+          if player_name[:player_name] == largest_size_name
+            return player_name[:rebounds]
+          end
+      end
+  end
+end

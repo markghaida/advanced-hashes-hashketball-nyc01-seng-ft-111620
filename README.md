@@ -1,5 +1,6 @@
 # Hashketball
-
+require './hashketball.rb'
+require 'pry'
 ## Learning Goals
 
 * Practice iterating over nested hashes.
