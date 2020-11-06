@@ -225,8 +225,7 @@ def big_shoe_rebounds
   largest_size = 0
   largest_size_name = ""
   game_hash.each do |key, value|
-      value.each do |k, v|
-        game_hash[key][:players].each do |player|
+      game_hash[key][:players].each do |player|
                   # binding.pry
            if player[:shoe] > largest_size
               largest_size = player[:shoe]
@@ -242,5 +241,4 @@ def big_shoe_rebounds
             return player_name[:rebounds]
           end
       end
-  end
 end
