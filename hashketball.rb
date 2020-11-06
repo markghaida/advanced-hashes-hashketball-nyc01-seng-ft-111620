@@ -232,12 +232,12 @@ def big_shoe_rebounds
               largest_size = player[:shoe]
               largest_size_name = player[:player_name]
            end
-            binding.pry
+            # binding.pry
             
         end
         # binding.pry
         # return the player with the largest shoe size
-        
+        if game_hash[key][:players].each do |player_name
       end
   end
 end
