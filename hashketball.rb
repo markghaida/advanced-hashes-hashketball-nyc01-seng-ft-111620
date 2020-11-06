@@ -240,6 +240,7 @@ def big_shoe_rebounds
         if game_hash[key][:players].each do |player_name|
           if player_name[:player_name] == largest_size_name
             return player_name[:rebounds]
+          end
       end
   end
 end
