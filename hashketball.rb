@@ -229,7 +229,6 @@ def big_shoe_rebounds
                    binding.pry
            if shoe[:shoe] == shoe[:shoe]
               new_array << shoe[:shoe]
-              return shoe[:shoe]
            end
             #binding.pry
         end
