@@ -233,7 +233,7 @@ def big_shoe_rebounds
             #binding.pry
         end
         # binding.pry
-        # return name
+        # return the player with the largest shoe size
       end
   end
 end
