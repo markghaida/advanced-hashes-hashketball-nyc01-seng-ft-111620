@@ -222,6 +222,7 @@ def team_names
   end
   
 def big_shoe_rebounds
+  new_array = []
   game_hash.each do |key, value|
       value.each do |k, v|
         game_hash[key][:players].each do |shoe|
