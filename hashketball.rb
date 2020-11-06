@@ -222,15 +222,16 @@ def team_names
   end
   
 def big_shoe_rebounds
-  new_array = []
+  new_array = 0
   game_hash.each do |key, value|
       value.each do |k, v|
         game_hash[key][:players].each do |player|
                    binding.pry
            if player[:shoe] == player[:shoe]
-              new_array << player[:shoe]
+              new_array new_array << player[:shoe]
            end
             #binding.pry
+            
         end
         # binding.pry
         # return the player with the largest shoe size
