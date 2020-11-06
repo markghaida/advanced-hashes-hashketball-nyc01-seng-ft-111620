@@ -228,7 +228,7 @@ def big_shoe_rebounds
         game_hash[key][:players].each do |shoe|
                    binding.pry
            if shoe[:shoe] == shoe[:shoe]
-              # new_hash = name
+              new_array << shoe[:shoe]
               return shoe[:shoe]
            end
             #binding.pry
