@@ -226,9 +226,9 @@ def big_shoe_rebounds
       value.each do |k, v|
         game_hash[key][:players].each do |shoe|
                    binding.pry
-           if shoe[:shoe] == player_name
+           if shoe[:shoe] == shoe[:shoe]
               # new_hash = name
-              return name
+              return shoe[:shoe]
            end
             #binding.pry
         end
